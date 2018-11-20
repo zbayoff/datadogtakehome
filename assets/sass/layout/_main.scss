@@ -12,14 +12,31 @@ main.container-fluid {
     .site-heading {
         margin-bottom: 2rem;
         h1 {
-            font-size: 3.5rem;
+            font-size: 2rem;
             font-weight: 200;
-            margin: 0 0 10px 0;
+            margin: 10px 0 10px 0;
+            @include tablet {
+                font-size: 3.5rem;
+                margin: 0 0 10px 0;
+            }
+            @include desktop {
+                font-size: 3.5rem;
+                margin: 0 0 10px 0;
+            }
         }
         h2 {
-            font-size: 1.75rem;
+            font-size: 1.1rem;
             font-weight: 200;
             margin: 0 0 3rem 0;
+            @include mobile {
+                font-size: 1.5rem;
+            }
+            @include tablet {
+                font-size: 1.75rem;
+            }
+            @include desktop {
+                font-size: 1.75rem;
+            }
         }
     }
     .plans-column {
@@ -33,6 +50,7 @@ main.container-fluid {
     }
     .plans {
         background-color: #f5f5f5;
+        -webkit-box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, .15);
         box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, .15);
         a {
             display: block;
@@ -46,7 +64,7 @@ main.container-fluid {
             margin: 0;
         }
         .plan-column {
-            padding: 1rem 0 1rem 0;
+            padding: 0;
         }
         .plan-title {
             font-size: 0.75rem;
@@ -60,7 +78,7 @@ main.container-fluid {
             font-size: 0.875rem;
         }
         .plan-list {
-            padding: 0 0 1rem 0;
+            padding: 0 0 2rem 0;
             list-style-type: none;
         }
         .pricing-detail-footer {
@@ -81,8 +99,11 @@ main.container-fluid {
         .section-infrastructure {
             border-bottom: 1px solid #C7C7C7;
             border-right: none;
-            padding: 0 1rem;
+            padding: 1rem 1rem 0 1rem;
             height: 100%;
+            -webkit-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
             @include tablet {
                 border-bottom: 1px solid #C7C7C7;
                 border-right: none;
@@ -102,12 +123,28 @@ main.container-fluid {
             .pricing-detail-footer {
                 border-bottom: 1px solid #2B2AA7;
             }
+            &:hover {
+                background-color: #2B2AA7;
+                color: white;
+                -webkit-transition: all 0.2s ease-in-out;
+                -o-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
+                .pricing-detail-footer {
+                    border-bottom: 1px solid white;
+                }
+            }
+            &:hover>* {
+                color: white;
+            }
         }
         .section-apm {
             border-bottom: 1px solid #C7C7C7;
             border-right: none;
-            padding: 0 1rem;
+            padding: 1rem 1rem 0 1rem;
             height: 100%;
+            -webkit-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
             @include tablet {
                 border-bottom: 1px solid #C7C7C7;
                 border-right: none;
@@ -127,10 +164,26 @@ main.container-fluid {
             .pricing-detail-footer {
                 border-bottom: 1px solid #14D071;
             }
+            &:hover {
+                -webkit-transition: all 0.2s ease-in-out;
+                -o-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
+                background-color: #14D071;
+                color: white;
+                .pricing-detail-footer {
+                    border-bottom: 1px solid white;
+                }
+            }
+            &:hover>* {
+                color: white;
+            }
         }
         .section-logs {
-            padding: 0 1rem;
+            padding: 1rem 1rem 0 1rem;
             height: 100%;
+            -webkit-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
             .plan-title,
             .pricing-detail-footer {
                 color: #FF635A;
@@ -138,14 +191,33 @@ main.container-fluid {
             .pricing-detail-footer {
                 border-bottom: 1px solid #FF635A;
             }
+            &:hover {
+                background-color: #FF635A;
+                color: white;
+                -webkit-transition: all 0.2s ease-in-out;
+                -o-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
+                .pricing-detail-footer {
+                    border-bottom: 1px solid white;
+                }
+            }
+            &:hover>* {
+                color: white;
+            }
         }
     }
     .card-columns {
         width: 100%;
+        -webkit-column-count: 1;
         column-count: 1;
         padding: 0 1rem;
+        @include desktop {
+            -webkit-column-count: 2;
+            column-count: 2;
+        }
         .card {
             border: none;
+            -webkit-box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, .15);
             box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, .15);
             display: inline-block;
             width: 100%;
@@ -155,6 +227,8 @@ main.container-fluid {
             top: 50%;
             left: 50%;
             width: 100%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
             padding: 1rem;
             h3 {
@@ -176,7 +250,10 @@ main.container-fluid {
             }
         }
         .card-apm {
-            background-image: linear-gradient( rgba(20, 208, 113, 0.9), rgba(20, 208, 113, 0.9)), url('../img/screenshot-apm.svg');
+            background-image: -webkit-gradient( linear, left top, left bottom, from(rgba(20, 208, 113, 0.75)), to(rgba(20, 208, 113, 0.75))), url('../img/screenshot-apm.png');
+            background-image: -webkit-linear-gradient( rgba(20, 208, 113, 0.75), rgba(20, 208, 113, 0.75)), url('../img/screenshot-apm.png');
+            background-image: -o-linear-gradient( rgba(20, 208, 113, 0.75), rgba(20, 208, 113, 0.75)), url('../img/screenshot-apm.png');
+            background-image: linear-gradient( rgba(20, 208, 113, 0.75), rgba(20, 208, 113, 0.75)), url('../img/screenshot-apm.png');
             background-size: cover;
             background-repeat: no-repeat;
             width: 100%;
@@ -184,13 +261,20 @@ main.container-fluid {
             padding-top: 50%;
             background-repeat: no-repeat;
             background-blend-mode: multiply;
+            -webkit-transition: all 0.25s ease-in-out;
+            -o-transition: all 0.25s ease-in-out;
             transition: all 0.25s ease-in-out;
             &:hover {
+                -webkit-transform: scale(1.02);
+                -ms-transform: scale(1.02);
                 transform: scale(1.02);
             }
         }
         .card-infrastructure {
-            background-image: linear-gradient( rgba(43, 42, 167, 0.9), rgba(43, 42, 167, 0.9)), url('../img/screenshot-infrastructure.svg');
+            background-image: -webkit-gradient( linear, left top, left bottom, from(rgba(43, 42, 167, 0.75)), to(rgba(43, 42, 167, 0.75))), url('../img/screenshot-infrastructure.png');
+            background-image: -webkit-linear-gradient( rgba(43, 42, 167, 0.75), rgba(43, 42, 167, 0.75)), url('../img/screenshot-infrastructure.png');
+            background-image: -o-linear-gradient( rgba(43, 42, 167, 0.75), rgba(43, 42, 167, 0.75)), url('../img/screenshot-infrastructure.png');
+            background-image: linear-gradient( rgba(43, 42, 167, 0.75), rgba(43, 42, 167, 0.75)), url('../img/screenshot-infrastructure.png');
             background-size: cover;
             background-repeat: no-repeat;
             width: 100%;
@@ -198,42 +282,74 @@ main.container-fluid {
             padding-top: 50%;
             background-repeat: no-repeat;
             background-blend-mode: multiply;
+            -webkit-transition: all 0.25s ease-in-out;
+            -o-transition: all 0.25s ease-in-out;
             transition: all 0.25s ease-in-out;
             &:hover {
+                -webkit-transform: scale(1.02);
+                -ms-transform: scale(1.02);
                 transform: scale(1.02);
             }
         }
         .card-logs {
-            background-image: linear-gradient( rgba(255, 99, 90, 0.9), rgba(255, 99, 90, 0.9)), url('../img/screenshot-logs.svg');
+            background-image: -webkit-gradient( linear, left top, left bottom, from(rgba(255, 99, 90, 0.75)), to(rgba(255, 99, 90, 0.75))), url('../img/screenshot-logs.png');
+            background-image: -webkit-linear-gradient( rgba(255, 99, 90, 0.75), rgba(255, 99, 90, 0.75)), url('../img/screenshot-logs.png');
+            background-image: -o-linear-gradient( rgba(255, 99, 90, 0.75), rgba(255, 99, 90, 0.75)), url('../img/screenshot-logs.png');
+            background-image: linear-gradient( rgba(255, 99, 90, 0.75), rgba(255, 99, 90, 0.75)), url('../img/screenshot-logs.png');
             background-size: cover;
             background-repeat: no-repeat;
             width: 100%;
             padding-top: 50%;
             background-repeat: no-repeat;
             background-blend-mode: multiply;
+            -webkit-transition: all 0.25s ease-in-out;
+            -o-transition: all 0.25s ease-in-out;
             transition: all 0.25s ease-in-out;
             &:hover {
+                -webkit-transform: scale(1.02);
+                -ms-transform: scale(1.02);
                 transform: scale(1.02);
             }
         }
         .card-clients {
             .client-grid {
+                display: -ms-grid;
                 display: grid;
+                -ms-grid-columns: 1fr 1fr 1fr 1fr;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 @include tablet {
-                    grid-template-columns: repeat(3, minmax(70px, 1fr));
+                    -ms-grid-columns: 70px 70px 70px;
+                    -ms-grid-columns: min-content 70px;
+                    -ms-grid-columns: max-content 100%;
+                    grid-template-columns: repeat(3, minmax(70px, 100%));
                 }
                 @include desktop {
-                    grid-template-columns: repeat(3, minmax(70px, 1fr));
+                    -ms-grid-columns: 70px 70px 70px;
+                    -ms-grid-columns: min-content 70px;
+                    -ms-grid-columns: max-content 100%;
+                    grid-template-columns: repeat(3, minmax(70px, 100%));
                 }
                 .module {
-                    padding: 50% 0 50% 0;
+                    padding: 50% 1rem;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
                     justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
                     align-items: center;
+                    -ms-flex-line-pack: center;
                     align-content: center;
+                    @include tablet {}
+                    @include desktop {}
                     h3 {
                         margin: 0;
+                    }
+                    img {
+                        width: 22%;
+                        position: absolute;
                     }
                     &.airbnb-module {
                         background-color: #FF5A5F;
@@ -260,23 +376,43 @@ main.container-fluid {
                         background-color: #00A8E0;
                     }
                     &.ad-roll-module {
+                        -ms-grid-column: 1;
+                        -ms-grid-column-span: 4;
                         grid-column: 1/span 4;
+                        -ms-grid-row: 1;
+                        -ms-grid-row-span: 3;
                         grid-row: 1/4;
+                        -webkit-box-orient: vertical;
+                        -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
                         flex-direction: column;
+                        -webkit-box-align: start;
+                        -ms-flex-align: start;
                         align-items: flex-start;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
                         justify-content: center;
                         padding: 1rem;
                         background-color: #f5f5f5;
                         @include tablet {
+                            -ms-grid-column: 1;
+                            -ms-grid-column-span: 3;
                             grid-column: 1/span 3;
+                            -ms-grid-row: 1;
+                            -ms-grid-row-span: 2;
                             grid-row: 1/3;
                         }
                         @include desktop {
+                            -ms-grid-column: 1;
+                            -ms-grid-column-span: 3;
                             grid-column: 1/span 3;
+                            -ms-grid-row: 1;
+                            -ms-grid-row-span: 2;
                             grid-row: 1/3;
                         }
                         .ad-roll-img-container {
                             img {
+                                position: static;
                                 width: 100px;
                             }
                         }
@@ -294,17 +430,29 @@ main.container-fluid {
                             text-transform: uppercase;
                         }
                         .ad-roll-link {
+                            cursor: pointer;
                             display: block;
                             margin: 2rem 0 0 0;
                             color: #7700FF;
                             font-size: 1.1rem;
+                            &:hover {
+                                text-decoration: underline;
+                            }
                         }
                         @include tablet {
+                            -ms-grid-column: 2;
+                            -ms-grid-column-span: 2;
                             grid-column: 2/span 2;
+                            -ms-grid-row: 1;
+                            -ms-grid-row-span: 2;
                             grid-row: 1/3;
                         }
                         @include desktop {
+                            -ms-grid-column: 2;
+                            -ms-grid-column-span: 2;
                             grid-column: 2/span 2;
+                            -ms-grid-row: 1;
+                            -ms-grid-row-span: 2;
                             grid-row: 1/3;
                         }
                     }
@@ -315,9 +463,11 @@ main.container-fluid {
             }
         }
         .card-observability {
-            background-color: #F5F5F5F5;
+            background-color: #F5F5F5;
             padding: 1.25rem;
+            -webkit-box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, .15);
             box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, .15);
+            cursor: pointer;
             h3 {
                 color: #724EEF;
                 text-align: left;
@@ -329,9 +479,23 @@ main.container-fluid {
                 font-size: 1.3rem;
                 text-align: left;
             }
+            .chevron-container {
+                overflow: hidden;
+            }
             .chevron-img {
                 width: 3rem;
                 fill: #D8D8D8;
+                right: -200px;
+                position: absolute;
+                opacity: 0;
+                overflow: hidden;
+                -webkit-transition: right .25s ease-in-out, opacity .25s ease-in-out;
+                -o-transition: right .25s ease-in-out, opacity .25s ease-in-out;
+                transition: right .25s ease-in-out, opacity .25s ease-in-out;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                top: 50%;
             }
             .see-more-link {
                 display: inline-block;
@@ -345,22 +509,35 @@ main.container-fluid {
                 white-space: nowrap;
                 img {
                     width: 80%;
-                    margin-right: 1rem;
+                    margin: 0 1rem 1rem 0;
                     display: inline-block;
+                }
+            }
+            &:hover {
+                .chevron-img {
+                    right: 30px;
+                    -webkit-transition: right .25s ease-in-out, opacity .25s ease-in-out;
+                    -o-transition: right .25s ease-in-out, opacity .25s ease-in-out;
+                    transition: right .25s ease-in-out, opacity .25s ease-in-out;
+                    opacity: 1;
+                    opacity: 1;
                 }
             }
         }
         .card-img-overlay {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
-        }
-        @include tablet {
-            column-count: 1;
-        }
-        @include desktop {
-            column-count: 2;
         }
     }
 }

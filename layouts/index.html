@@ -4,7 +4,7 @@
     <div class="col-md-12 col-lg-4 site-heading">
       <h1>{{ .Title }}</h1>
       <h2>See inside any stack, any app, at any scale, anywhere.</h2>
-      <a href="#" class="btn">Free Trial</a>
+      <a href="#" class="btn">Try Free</a>
     </div>
     <div class="col-md-12 col-lg-8 plans-column">
       <div class="row plans">
@@ -87,33 +87,32 @@
       <div class="card card-clients">
         <div class="client-grid">
           <div class="module airbnb-module">
-            <img src="{{ "img/airbnb-logo.svg" | relURL }}" class="card-img-top">
+            <img src="{{ "img/airbnb-logo.png" | relURL }}" class="">
           </div>
           <div class="module evernote-module">
-            <img src="{{ "img/evernote-logo.svg" | relURL }}" class="card-img-top">
+            <img src="{{ "img/evernote-logo.png" | relURL }}" class="">
           </div>
           <div class="module peloton-module">
-            <img src="{{ "img/peloton-logo.svg" | relURL }}" class="card-img-top">
+            <img src="{{ "img/peloton-logo.png" | relURL }}" class="">
           </div>
           <div class="module samsung-module">
-            <img src="{{ "img/samsung-logo.svg" | relURL }}" class="card-img-top">
+            <img src="{{ "img/samsung-logo.png" | relURL }}" class="">
           </div>
           <div class="module nginx-module">
-            <img src="{{ "img/nginx-logo.svg" | relURL }}" class="card-img-top">
+            <img src="{{ "img/nginx-logo.png" | relURL }}" class="">
           </div>
           <div class="module pagerduty-module">
-            <img src="{{ "img/pagerduty-logo.svg" | relURL }}" class="card-img-top">
+            <img src="{{ "img/pagerduty-logo.png" | relURL }}" class="">
           </div>
           <div class="module atat-module">
-              <img src="{{ "img/atat-logo.svg" | relURL }}" class="card-img-top">
+              <img src="{{ "img/atat-logo.png" | relURL }}" class="">
             </div>
           <div class="module wholefoods-module">
-            <img src="{{ "img/wholefoods-logo.svg" | relURL }}" class="card-img-top">
-            <img>
+            <img src="{{ "img/wholefoods-logo.png" | relURL }}" class="">
           </div>
           <div class="module ad-roll-module">
             <div class="ad-roll-img-container">
-              <img src="{{ "img/adroll-logo.svg" | relURL }}" class="">
+              <img src="{{ "img/adroll-logo.png" | relURL }}" class="">
             </div>
             <p class="ad-roll-quote">“Datadog has been instrumental in managing our real-time infrastructure, globally distributed in 5 data centers
               across hundreds of instances, and thousands of different metrics and dimensions for each host. I can't believe
@@ -125,20 +124,24 @@
         </div>
       </div>
       <div class="card card-observability">
-        <h3>Observability</h3>
-        <div class="row">
-            <div class="col-10">
-                <h4>With turn-key integrations, Datadog seamlessly aggregates metrics and events across the full devops stack</h4>
-              </div>
-              <div class="col-2 d-flex align-items-center justify-content-center">
-                  <img src="{{ "img/right-chevron.svg" | relURL }}" class="chevron-img">
-              </div>
-        </div>
-        <a class="see-more-link" href="#">Read More</a>
-        <div class="observable-img">
-          <img src="{{ "img/home-observability.svg" | relURL }}" class="">
-          <img src="{{ "img/home-observability2.svg" | relURL }}" class="">
-        </div>
+        <a href="#">
+            <h3>Observability</h3>
+            <div class="row">
+                <div class="col-10">
+                    <h4>With turn-key integrations, Datadog seamlessly aggregates metrics and events across the full devops stack</h4>
+                  </div>
+                  <div class="col-2 d-flex align-items-center justify-content-center chevron-container">
+                      <img src="{{ "img/right-chevron.svg" | relURL }}" class="chevron-img">
+                  </div>
+            </div>
+            <p class="see-more-link">Read More</p>
+            <div class="observable-img">
+                    <!-- <object class="module-img" type="image/svg+xml" data="img/home-observability.svg"></object> -->
+                    <!-- <object class="module-img" type="image/svg+xml" data="img/home-observability2.svg"></object> -->
+              <img src="{{ "img/home-observability.png" | relURL }}" class="">
+              <img src="{{ "img/home-dashboards.png" | relURL }}" class="">
+            </div>
+        </a>
       </div>
     </div>
   </div>
