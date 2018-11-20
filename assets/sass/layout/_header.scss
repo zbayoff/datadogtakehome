@@ -1,0 +1,90 @@
+header {
+    background-color: $header-color;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    z-index: 1;
+    @include tablet {
+        width: 150px;
+        height: 100vh;
+        position: fixed;
+        padding: 0 1rem;
+    }
+    @include desktop {
+        width: 150px;
+        height: 100vh;
+        position: fixed;
+        padding: 0 1rem;
+    }
+    .logo-container {
+        display: flex;
+        justify-content: flex-start;
+        margin: 0;
+        @include tablet {
+            justify-content: center;
+            margin: 1rem 0 2rem 0;
+        }
+        @include desktop {
+            justify-content: center;
+            margin: 1rem 0 2rem 0;
+        }
+    }
+    nav {
+        .navbar-toggler {
+            display: block;
+            @include tablet {
+                display: none;
+            }
+            @include desktop {
+                display: none;
+            }
+        }
+        &.navbar {
+            .navbar-toggler {
+                color: white;
+                &:focus,
+                &:active {
+                    outline: none !important;
+                    box-shadow: none;
+                }
+                i {
+                    font-size: 2rem;
+                }
+            }
+            .navbar-nav {
+                flex-direction: column;
+                background-color: $header-color;
+                padding-top: 2rem;
+                .nav-item {
+                    transition: all 0.5s ease;
+                    &:hover {
+                        .nav-link{
+                            color: #c86dd7;
+                        }
+                    }
+                    .nav-link {
+                        font-size: 1.1rem;
+                        color: white;
+                        text-transform: uppercase;
+                        &.login-link {
+                            margin-top: 1rem;
+                            text-transform: none;
+                        }
+                    }
+                }
+            }
+            @include tablet {
+                flex-direction: column;
+                .navbar-nav {
+                    flex-direction: column;
+                }
+            }
+            @include desktop {
+                flex-direction: column;
+                .navbar-nav {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

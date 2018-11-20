@@ -1,0 +1,146 @@
+{{ define "header" }} {{ end }} {{ define "main" }}
+<main class="container-fluid">
+  <div class="row main-row">
+    <div class="col-md-12 col-lg-4 site-heading">
+      <h1>{{ .Title }}</h1>
+      <h2>See inside any stack, any app, at any scale, anywhere.</h2>
+      <a href="#" class="btn">Free Trial</a>
+    </div>
+    <div class="col-md-12 col-lg-8 plans-column">
+      <div class="row plans">
+        <div class="col-md-12 col-lg-12 col-xl-4 plan-column">
+          <a href="#" class="section-infrastructure">
+            <h3 class="plan-title">Infrastructure</h3>
+            <p>Starting at</p>
+            <p class="plan-pricing">$15</p>
+            <p class="plan-note">Per host, per month<sup>*</sup></p>
+            <p class="mt-3 mb-3">Centralize your monitoring of systems and services</p>
+            <ul class="plan-list">
+              <li>- 250+ integrations</li>
+              <li>- Out-of-the-box dashboards</li>
+              <li>- 15-month metric retention
+              </li>
+            </ul>
+
+            <p class="pricing-detail-footer">See Details</p>
+          </a>
+        </div>
+        <div class="col-md-12 col-lg-12 col-xl-4 plan-column">
+          <a href="#" class="section-apm">
+            <h3 class="plan-title">APM</h3>
+            <p>Starting at</p>
+            <p class="plan-pricing">$31</p>
+            <p class="plan-note">Per host, per month<sup>*</sup></p>
+            <p class="mt-3 mb-3">Centralize your monitoring of systems and services</p>
+            <ul class="plan-list">
+              <li>- Java, Ruby, Python, Go, Node, and more
+              </li>
+              <li>- Out-of-the-box application health dashboards
+              </li>
+              <li>- 1 million trace events per host included
+              </li>
+            </ul>
+            <p class="pricing-detail-footer">See Details</p>
+          </a>
+        </div>
+        <div class="col-md-12 col-lg-12 col-xl-4 plan-column">
+          <a href="#" class="section-logs">
+            <h3 class="plan-title">Logs Management</h3>
+            <p>Starting at</p>
+            <p class="plan-pricing">$1.27</p>
+            <p class="plan-note">Per host, per month<sup>*</sup></p>
+            <p class="mt-3 mb-3">Analyze and explore log data in context</p>
+            <ul class="plan-list">
+              <li>- Collect from any source
+              </li>
+              <li>- Automated &amp; custom processing
+              </li>
+              <li>- Fully integrated with Infrastructure and APM
+              </li>
+            </ul>
+            <p class="pricing-detail-footer">See Details</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="card-columns">
+      <div class="card img-fluid card-apm">
+        <div class="card-content">
+          <h3>APM</h3>
+          <h4>Get full visibility into modern applications</h4>
+        </div>
+      </div>
+      <div class="card img-fluid card-logs">
+        <div class="card-content">
+          <h3>Logs Management</h3>
+          <h4>Analyze and explore log data in context</h4>
+        </div>
+      </div>
+      <div class="card img-fluid card-infrastructure">
+          <div class="card-content">
+            <h3>infrastructure</h3>
+            <h4>See across systems, apps, and services</h4>
+          </div>
+        </div>
+      <div class="card card-clients">
+        <div class="client-grid">
+          <div class="module airbnb-module">
+            <img src="{{ "img/airbnb-logo.svg" | relURL }}" class="card-img-top">
+          </div>
+          <div class="module evernote-module">
+            <img src="{{ "img/evernote-logo.svg" | relURL }}" class="card-img-top">
+          </div>
+          <div class="module peloton-module">
+            <img src="{{ "img/peloton-logo.svg" | relURL }}" class="card-img-top">
+          </div>
+          <div class="module samsung-module">
+            <img src="{{ "img/samsung-logo.svg" | relURL }}" class="card-img-top">
+          </div>
+          <div class="module nginx-module">
+            <img src="{{ "img/nginx-logo.svg" | relURL }}" class="card-img-top">
+          </div>
+          <div class="module pagerduty-module">
+            <img src="{{ "img/pagerduty-logo.svg" | relURL }}" class="card-img-top">
+          </div>
+          <div class="module atat-module">
+              <img src="{{ "img/atat-logo.svg" | relURL }}" class="card-img-top">
+            </div>
+          <div class="module wholefoods-module">
+            <img src="{{ "img/wholefoods-logo.svg" | relURL }}" class="card-img-top">
+            <img>
+          </div>
+          <div class="module ad-roll-module">
+            <div class="ad-roll-img-container">
+              <img src="{{ "img/adroll-logo.svg" | relURL }}" class="">
+            </div>
+            <p class="ad-roll-quote">“Datadog has been instrumental in managing our real-time infrastructure, globally distributed in 5 data centers
+              across hundreds of instances, and thousands of different metrics and dimensions for each host. I can't believe
+              there was a time when we didn't have Datadog.”</p>
+            <p class="ad-roll-quoter">Valentino Volonghi</p>
+            <p class="ad-roll-quoter-title">Chief Technology Officer</p>
+            <a class="ad-roll-link">See More Stories</a>
+          </div>
+        </div>
+      </div>
+      <div class="card card-observability">
+        <h3>Observability</h3>
+        <div class="row">
+            <div class="col-10">
+                <h4>With turn-key integrations, Datadog seamlessly aggregates metrics and events across the full devops stack</h4>
+              </div>
+              <div class="col-2 d-flex align-items-center justify-content-center">
+                  <img src="{{ "img/right-chevron.svg" | relURL }}" class="chevron-img">
+              </div>
+        </div>
+        <a class="see-more-link" href="#">Read More</a>
+        <div class="observable-img">
+          <img src="{{ "img/home-observability.svg" | relURL }}" class="">
+          <img src="{{ "img/home-observability2.svg" | relURL }}" class="">
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{{ end }} {{ define "footer" }} {{ end }}

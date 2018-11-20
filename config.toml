@@ -1,0 +1,4 @@
+baseURL = "https://example.com"
+defaultContentLanguage = "en"
+languageCode = "en-us"
+title = "Datadog Take Home Page"

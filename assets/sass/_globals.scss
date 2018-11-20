@@ -1,0 +1,27 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.btn {
+    display: inline-block;
+    margin: 0 0 7px 0;
+    padding: 11px 20px 12px;
+    text-transform: uppercase;
+    color: #7749a3;
+    background: #fff;
+    border-radius: 3px;
+    border-color: #7749a3;
+    &:hover {
+        background: #c024b6;
+        background: linear-gradient(45deg, #c024b6, #3023ae);
+        color: #fff;
+    }
+}
+
